@@ -390,8 +390,20 @@
   }
 
   .next-steps h2{
-    font-size:1.35rem; font-weight:500; font-style:italic; margin:0 0 1.1rem;
+    font-size:1.35rem; font-weight:500; font-style:italic; margin:0;
+    display:inline;
   }
+  .next-steps summary{
+    cursor:pointer; list-style:none; display:flex; align-items:center; gap:0.6rem;
+    margin:0 0 1.1rem;
+  }
+  .next-steps summary::-webkit-details-marker{display:none;}
+  .next-steps summary::after{
+    content:"+"; font-size:1.3rem; line-height:1; color:var(--ash);
+    transition:transform .2s ease;
+  }
+  .next-steps[open] summary::after{transform:rotate(45deg);}
+  .next-steps summary:focus-visible{outline:2px solid var(--gold-3); outline-offset:3px;}
   .next-steps ul{margin:0; padding:0 0 0 1.1rem;}
   .next-steps li{margin:0 0 0.7rem; font-size:0.98rem; color:#3a3428;}
 
@@ -583,14 +595,14 @@
       <p class="verse">You make known to me the path of life; In Your presence there is fullness of joy&hellip;</p>
     </div>
 
-    <div class="next-steps">
-      <h2>Now it's your turn</h2>
+    <details class="next-steps">
+      <summary><h2>Now it's your turn</h2></summary>
       <ul>
         <li>Repeat these truths to yourself every day. Sing them out every day. And every time you face the weight of dispair, fear, complaint, etc.</li>
         <li>Talk with God. He desires good things for you and a healthy relationship with you.</li>
         <li>Fight with the tools God has provided us all to keep your faith &amp; mind strong. — <span class="ref" data-ref="Ephesians 6:10-20">Ephesians 6:10-20</span></li>
       </ul>
-    </div>
+    </details>
   </section>
 
 </div>
